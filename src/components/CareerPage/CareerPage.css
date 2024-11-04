@@ -1,0 +1,136 @@
+/* General styling */
+.contain {
+  padding: 60px 20px;
+}
+
+.mainHead {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.mainContent {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Shared box styling */
+.box {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+/* Hover effect */
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Box 1 - Job Openings */
+.box:first-child {
+  border-left: 5px solid #0066cc;
+}
+
+.box:first-child .head {
+  color: #0066cc;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.box:first-child .content {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Box 2 - Internship Programs */
+.box:nth-child(2) {
+  border-left: 5px solid #009688;
+}
+
+.box:nth-child(2) .head {
+  color: #009688;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.box:nth-child(2) .content {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Box 3 - Employee Benefits */
+.box:last-child {
+  border-left: 5px solid #0a64ff;
+}
+
+.box:last-child .head {
+  color: #ff9800;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.box:last-child .content {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Shared image styling */
+.image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+  transition: transform 0.3s ease;
+}
+
+.box:hover .image {
+  transform: scale(1.1);
+}
+
+.box {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 160px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position above the box */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.box:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
